@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>XML Play</title>
+    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript">
+    function main()
+{
+    console.log( "main()");
+    diaspora.appendClusterToTable(); // See webpack.config.js, but output is library var "diaspora".  Also see bundle.js.
+}
+    </script>
+  </head>
+  <body onload="main()">
+    <p>Cluster:</p>
+    <table id="cluster-table" cellpadding="3">
+      <tr>
+        <th>Name</th>
+        <th>Attributes</th>
+      </tr>
+    </table>
+  </body>
+</html>
