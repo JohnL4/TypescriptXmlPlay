@@ -54,10 +54,10 @@ export function appendClusterToTable( /* starSystems: Array<StarSystem> */): voi
    for (let s of starSystems)
    {
       console.log( s.id);
-      let row = tbody.insertRow( tbody.rows.length);
-      let cell = row.insertCell( row.cells.length);
+      let row = tbody.appendChild( doc.createElement("TR"));
+      let cell = row.appendChild( doc.createElement("TD"));
       cell.textContent = s.id;
-      cell = row.insertCell( row.cells.length);
+      cell = row.appendChild( doc.createElement("TD"));
       cell.textContent = `T${s.technology} E${s.environment} R${s.resources}`;
    }
 }
